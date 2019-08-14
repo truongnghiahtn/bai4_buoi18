@@ -11,5 +11,10 @@ export class Baitap4Component implements OnInit {
 
   ngOnInit() {
   }
+  detail:object={TenSP:'',Chitiet:'',hinAnh:'',Gia:''};
+  detail_parent(sanpham)
+  {
+    this.detail=sanpham;
+  }
 
 }

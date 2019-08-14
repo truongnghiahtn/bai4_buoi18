@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-baitap4-product-item',
@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./baitap4-product-item.component.scss']
 })
 export class Baitap4ProductItemComponent implements OnInit {
+@Input() SanPham;
+@Output() eventshow = new EventEmitter();
 
+status:boolean=true;
   constructor() { }
 
   ngOnInit() {
+  }
+  showmodal()
+  {
+  
+    this.eventshow.emit(this.SanPham);
+  }
+  hide(){
+    this.status=false;
+  }
+  show(){
+    this.status=true
   }
 
 }

@@ -3,14 +3,6 @@
         BEST SMARTPHONE</h1>
     <div class="row">
 
-        <app-baitap4-product-item class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3"></app-baitap4-product-item>
-
-
-        <app-baitap4-product-item class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3"></app-baitap4-product-item>
-
-
-        <app-baitap4-product-item class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3"></app-baitap4-product-item>
-
-        <app-baitap4-product-item class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3"></app-baitap4-product-item>
+        <app-baitap4-product-item class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-lg-3" *ngFor="let item of mangsmartphone" [SanPham]="item" (eventshow)="detail($event)"></app-baitap4-product-item>
     </div>
 </section>

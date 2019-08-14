@@ -1,7 +1,8 @@
 <div class="bg-dark">
     <app-baitap4-header></app-baitap4-header>
     <app-baitap4-carousel></app-baitap4-carousel>
-    <app-baitap4-smartphone></app-baitap4-smartphone>
-    <app-baitap4-laptop></app-baitap4-laptop>
+    <app-baitap4-smartphone (eventshow_parent)="detail_parent($event)"></app-baitap4-smartphone>
+    <app-baitap4-laptop (eventshow_parent)="detail_parent($event)"></app-baitap4-laptop>
+    <app-modal [sanpham]="detail"></app-modal>
     <app-baitap4-footer></app-baitap4-footer>
 </div>
